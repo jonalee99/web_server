@@ -1,0 +1,13 @@
+This consists of 2 docker containers:
+caddy
+nginx
+
+Once running, caddy routes the root domain to nginx, which serves files from the nginx/data folder
+
+
+To install, install:
+docker
+docker-compose
+
+Then run in the root directory:
+docker-compose run

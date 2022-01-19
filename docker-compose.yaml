@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  caddy:
+    image: caddy
+    container_name: caddy
+    restart: unless-stopped
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/data:/data
+      - ./caddy/config:/config
+    ports:
+      - 80:80
+      - 443:443
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx/data:/usr/share/nginx/html:ro
+
+  nginx2:
+    image: nginx:alpine
+    container_name: nginx2
+    restart: unless-stopped

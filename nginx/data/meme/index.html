@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Annie's a clown<br>
+    </div>
+    <div>
+        <button type="button" onclick="audio.play()">Click Me!</button>
+    </div>
+    
+    <script>
+        function test() {
+            fetch("https://api.jslee.dev/").then(data => console.log(data))
+        }
+        var audio = new Audio("./sounds/bingbong.mp3")
+
+    </script>
+</body>
+</html>
