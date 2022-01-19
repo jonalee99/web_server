@@ -1,0 +1,8 @@
+www.jslee.dev jslee.dev {
+    reverse_proxy nginx:80
+}
+
+api.jslee.dev {
+    header Access-Control-Allow-Origin "https://jslee.dev"
+    reverse_proxy nginx2:80
+}
