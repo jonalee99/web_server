@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <button type="button" onclick="test()">Spotify Log In</button><br>
+        <a href="/youtube" target="_blank" rel="noopener noreferrer">Youtube Log In</a></br>
+        <a href="/cookies">Put Liked Youtube Songs into Spotify Playlist</a>
+        <form action="/code" method="get">
+            <input type="text" id="code" name="code" placeholder="Enter Youtube Example.com Link here"/><br>
+        </form>
+        <script>
+            function test() {
+                fetch("https://api.jslee.dev/spotify")//.then(data => console.log(data))
+            }
+        </script>    
+    </body>
+</html>

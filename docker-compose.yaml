@@ -20,7 +20,7 @@ services:
     volumes:
       - ./nginx/data:/usr/share/nginx/html:ro
 
-  nginx2:
-    image: nginx:alpine
-    container_name: nginx2
+  yttospot:
+    build: ./go_app
+    container_name: yttospot
     restart: unless-stopped
