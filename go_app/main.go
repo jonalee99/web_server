@@ -33,7 +33,7 @@ var (
 	}
 
 	spotifyAuth = spotifyauth.New(
-		spotifyauth.WithRedirectURL("http://localhost:8080/spotify/callback"),
+		spotifyauth.WithRedirectURL("https://api.jslee.dev/spotify/callback"),
 		spotifyauth.WithScopes(spotifyauth.ScopePlaylistModifyPublic),
 		spotifyauth.WithClientID("6fea87e058b543aebe2018417b462a9d"),
 		spotifyauth.WithClientSecret("84c06f78bcfd458aa6e182435cef8313"),
@@ -94,7 +94,7 @@ func handleCode(w http.ResponseWriter, r *http.Request) {
         MaxAge: int(token.Expiry.Sub(time.Now()).Seconds()),
 		HttpOnly: true,
 		Secure: true,
-		Domain: "localhost",
+		Domain: "https://api.jslee.dev",
 		Path: "/",
 	}
 	http.SetCookie(w, cookie)
@@ -283,7 +283,7 @@ func handleSpotifyCallback(w http.ResponseWriter, r *http.Request) {
         MaxAge: int(token.Expiry.Sub(time.Now()).Seconds()),
 		HttpOnly: true,
 		Secure: true,
-		Domain: "localhost",
+		Domain: "https://api.jslee.dev",
 		Path: "/",
 	}
 	http.SetCookie(w, cookie)

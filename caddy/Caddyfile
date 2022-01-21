@@ -4,5 +4,6 @@ www.jslee.dev jslee.dev {
 
 api.jslee.dev {
     header Access-Control-Allow-Origin "https://jslee.dev"
-    reverse_proxy yttspot:8080
+    header Access-Control-Allow-Origin "https://api.jslee.dev"
+    reverse_proxy yttospot:8080
 }
